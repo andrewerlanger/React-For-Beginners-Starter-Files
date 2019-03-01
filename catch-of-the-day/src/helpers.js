@@ -1,15 +1,15 @@
-export function formatPrice(cents) {
+export const formatPrice = (cents) => {
   return (cents / 100).toLocaleString("en-US", {
     style: "currency",
     currency: "USD"
   });
 }
 
-export function rando(arr) {
+export const rando = (arr) => {
   return arr[Math.floor(Math.random() * arr.length)];
 }
 
-export function slugify(text) {
+export const slugify = (text) => {
   return text
     .toString()
     .toLowerCase()
@@ -20,7 +20,7 @@ export function slugify(text) {
     .replace(/-+$/, "");
 }
 
-export function getFunName() {
+export const getFunName = () => {
   const adjectives = [
     "adorable",
     "beautiful",
