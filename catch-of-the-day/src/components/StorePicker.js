@@ -1,10 +1,14 @@
 // This is importing is from package.json
 import React from 'react';
-
+import PropTypes from 'prop-types';
 import { getFunName } from '../helpers.js';
 
 // The class extends React.Component and includes the render method
 class StorePicker extends React.Component {
+
+    static propTypes = {
+        history: PropTypes.object,
+    };
 
     myInput = React.createRef();
 
